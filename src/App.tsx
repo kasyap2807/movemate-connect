@@ -6,11 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
-import Search from "./pages/Search";
+import Book from "./pages/Book";
+import BookingConfirmation from "./pages/BookingConfirmation";
+import Track from "./pages/Track";
 import Dashboard from "./pages/Dashboard";
 import ProviderDashboard from "./pages/ProviderDashboard";
-import Chat from "./pages/Chat";
-import Booking from "./pages/Booking";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,12 +26,12 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/search" element={<Search />} />
+            <Route path="/book" element={<Book />} />
+            <Route path="/booking-confirmation" element={<BookingConfirmation />} />
+            <Route path="/track" element={<Track />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/provider-dashboard" element={<ProviderDashboard />} />
-            <Route path="/chat/:id" element={<Chat />} />
-            <Route path="/chat" element={<Chat />} />
-            <Route path="/booking/:id" element={<Booking />} />
+            <Route path="/admin" element={<AdminDashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
